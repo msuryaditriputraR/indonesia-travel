@@ -101,14 +101,24 @@ section {
   width: 70%;
 }
 
-
 /*header*/
 header {
   background-color: transparent;
   z-index: 10;
-  position: fixed;
   width: 100%;
   padding-top: 30px;
+  position: absolute;
+  transition: all .5 ease;
+}
+
+header.fixed {
+  position: fixed;
+  animation: headerFix .5 ease;
+  padding-top: 15px;
+}
+
+header.fixed .header-overlay {
+  background-color: var(--main-color);
 }
 
 .header-list {
@@ -131,7 +141,21 @@ header {
   margin-right: 20px;
 }
 
-.header-list a:hover {}
+.header-list a.active {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header-list a:hover {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header.fixed .header-list a.active {
+  color: var(--secondary-color);
+}
+
+header.fixed .header-list a:hover {
+  color: var(--secondary-color);
+}
 
 .menu {
   font-size: 30px;
@@ -524,4 +548,16 @@ footer .logo img {
 
 .footer-mediasosial a:not(:last-child) {
   margin-right: 15px;
+}
+
+/* animation */
+
+@keyframes headerFix {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
