@@ -1,0 +1,527 @@
+/* Variable CSS */
+:root {
+  --main-color: #142b4f;
+  --secondary-color: #62E8C0;
+  --text-gray: #b3aeb5;
+  --background-gray: #f7f7f7;
+}
+
+/* Reset CSS  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: "Poppins";
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 70px 0;
+}
+
+/* General Class Used */
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.heading h2 {
+  font-weight: bold;
+  font-size: 1.7em;
+  color: var(--main-color);
+}
+
+.heading p {
+  font-size: 19px;
+  color: var(--text-gray);
+  width: 50%;
+  margin: 15px auto 0;
+}
+
+.heading p span {
+  color: var(--main-color);
+  font-weight: bold;
+  opacity: .7;
+}
+
+.bottom {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.logo {
+  flex-basis: 15%;
+  z-index: 11;
+}
+
+.logo img {
+  width: 70%;
+}
+
+
+/*header*/
+header {
+  background-color: transparent;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.header-list {
+  flex-basis: 85%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+  z-index: 11;
+}
+
+.header-list a {
+  font-weight: bold;
+  color: white;
+  font-size: .9em;
+  transition: all 0.5s;
+  display: inline-block;
+}
+
+.header-list a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header-list a:hover {}
+
+.menu {
+  font-size: 30px;
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.header-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0));
+}
+
+/* Home */
+#home {
+  background-image: url('https://www.indonesia.travel/content/dam/indtravelrevamp/en/main-banner/banner-indonesia-travel-2021/agustus-2021/diamond-beach_banner.jpg');
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: 50% 75%;
+}
+
+#home .contents {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home .contents h1 {
+  color: #fff;
+  font-size: 2em;
+  text-shadow: 3px 1px 10px rgba(0, 0, 0, .6);
+  letter-spacing: .95px;
+}
+
+.btn-baca-selengkapnya {
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: .75em;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-baca-selengkapnya .fas {
+  margin-left: 8px;
+  font-size: 1.2em;
+}
+
+/* Section Petualangan  */
+#petualangan {
+  background-color: var(--background-gray);
+}
+
+.main-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.main-contents .content {
+  flex-basis: 23%;
+  text-align: center;
+}
+
+.main-contents .content img {
+  width: 100%;
+  height: 345px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.main-contents .content:hover img {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, .3);
+}
+
+.main-contents .content p {
+  font-size: .9em;
+  font-weight: lighter;
+}
+
+.main-contents .content p:last-child {
+  color: var(--main-color);
+  font-size: 1.1em;
+  font-weight: lighter;
+}
+
+
+/* section destinasi*/
+
+.content-destinasi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-destinasi .card {
+  flex-basis: 23%;
+  cursor: pointer;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.image-card {
+  position: relative;
+}
+
+.image-overlay {
+  z-index: 2;
+  background-color: rgba(129, 129, 129, 0.2);
+  opacity: 0;
+  transition: all .3s ease;
+  border-radius: 10px;
+}
+
+.content-destinasi .image-card:hover .image-overlay {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+.content-destinasi .image-card:hover img {
+  position: relative;
+  top: -5px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.content-destinasi .image-card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: all .3s ease;
+}
+
+.content-destinasi .card p {
+  position: absolute;
+  z-index: 3;
+  top: 80%;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: all .3s ease;
+  transform: translateY(180%);
+}
+
+.content-destinasi .image-card:hover+p {
+  transform: translateY(0);
+}
+
+.btn-selengkapnya {
+  background-color: var(--main-color);
+  color: white;
+  letter-spacing: .95px;
+  font-size: .9em;
+  font-weight: lighter;
+}
+
+.btn-selengkapnya:hover {
+  position: relative;
+  top: -3px;
+  box-shadow: 0px 2px 5px rgba(20, 43, 79, 0.4);
+}
+
+.btn-selengkapnya:active {
+  box-shadow: none;
+}
+
+/* Section Pengalaman */
+#pengalaman {
+  background-color: var(--background-gray);
+}
+
+.content-kegiatan {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  /* align-items: center; */
+}
+
+.content-kegiatan .card-kegiatan {
+  flex-basis: 23%;
+  text-align: center;
+  background-color: white;
+  border-radius: 0 0 30px 30px;
+  height: 560px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.content-kegiatan .card-kegiatan:hover {
+  opacity: 1;
+}
+
+.content-kegiatan .card-kegiatan img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+  display: block;
+}
+
+.content-kegiatan .card-kegiatan .text-kegiatan .title-kegiatan {
+  margin: 20px 0 10px;
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #3b3a3a;
+  letter-spacing: .95px;
+}
+
+.content-kegiatan .card-kegiatan .text-kegiatan {
+  padding: 0 15px;
+}
+
+.content-kegiatan .card-kegiatan .text-contents {
+  font-size: .85em;
+  color: #b3aeb5;
+  line-height: 1.7em;
+  margin-top: 10px;
+}
+
+/* Section informasi */
+.box {
+  margin: 30px 150px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box .item {
+  flex-basis: 20%;
+  margin-bottom: 25px;
+  text-align: center;
+  margin-right: 15px;
+  padding: 15px;
+  width: 100%;
+}
+
+.item .icon {
+  background-color: var(--main-color);
+  width: 60px;
+  height: 60px;
+  line-height: 65px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  cursor: pointer;
+}
+
+.item .icon .fas {
+  color: white;
+  font-size: 1.5em;
+}
+
+.item .icon:hover {
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px 3px rgba(20, 43, 79, .3);
+}
+
+.item p {
+  color: #3b3a3a;
+  font-weight: bold;
+}
+
+/* Section Langganan */
+#langganan {
+  margin-top: -45px;
+}
+
+.box-langganan {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.box-langganan::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  background-image: url('https://www.indonesia.travel/content/dam/indtravelrevamp/home-revamp/suscribebanner.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  transition: all .3s;
+}
+
+.box-langganan:hover::before {
+  transform: scale(1.1);
+}
+
+.box-langganan .content {
+  margin-left: 30%;
+  padding: 25px;
+}
+
+.box-langganan .content h3 {
+  color: white;
+  text-align: left;
+  letter-spacing: .95px;
+  font-weight: bold;
+  font-size: 2.2rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.box-langganan .content .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.box-langganan .content input {
+  flex-basis: 70%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+.box-langganan .content input::placeholder {
+  color: #b3aeb5;
+}
+
+.box-langganan .content .btn-subscribe {
+  flex-basis: 25%;
+  background-color: #142b4f;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: .95px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--main-color);
+  width: 100%;
+  padding: 20px 0 5px;
+}
+
+footer .logo img {
+  width: 80%;
+}
+
+.footer-list {
+  flex-basis: 65%;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-list a {
+  font-size: .7em;
+  color: inherit;
+  font-weight: lighter;
+}
+
+.footer-mediasosial {
+  flex-basis: 20%;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.footer-mediasosial a {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  color: inherit;
+  display: inline-block;
+}
+
+.footer-mediasosial .fab {
+  font-size: 1.2em;
+}
+
+.footer-mediasosial a:not(:last-child) {
+  margin-right: 15px;
+}

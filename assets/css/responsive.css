@@ -1,0 +1,127 @@
+/* Untuk Tablet */
+@media all and (max-width: 1000px) {
+    .menu {
+        display: block;
+    }
+
+    .header-list {
+        display: none;
+    }
+
+    .card,
+    .main-contents,
+    .kegiatan {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+
+    .box .item {
+        flex-basis: 30%;
+    }
+
+    .item .icon {
+        width: 100px;
+        height: 100px;
+        line-height: 120px;
+    }
+
+    .item .icon .fas {
+        font-size: 40px;
+    }
+
+
+    .item p {
+        font-size: 18px;
+    }
+
+    .box-langganan .content {
+        margin: 0 15px;
+    }
+
+    .box-langganan .content h3 {
+        text-align: left;
+        font-size: 2.2rem;
+    }
+
+    .box-langganan .content .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        margin: 20px 0;
+    }
+
+    .box-langganan .content input {
+        flex-basis: 65%;
+        margin-right: 20px;
+    }
+
+
+    .box-langganan .content .btn-subscribe {
+        flex: 25%;
+        height: 50px;
+    }
+}
+
+/* Untuk Smartphone */
+@media all and (max-width: 670px) {
+
+    .contents h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .kegiatan,
+    .main-contents {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .box {
+        margin: 10px 50px;
+    }
+
+    .box .item {
+        flex-basis: 45%;
+    }
+
+    .heading p {
+        font-size: 16px;
+    }
+
+    .box-langganan .content {
+        margin: 0 15px;
+    }
+
+    .box-langganan .content h3 {
+        text-align: left;
+        font-size: 2.2rem;
+    }
+
+    .box-langganan .content .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        margin: 20px 0;
+    }
+
+    .box-langganan .content input {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+
+    .box-langganan .content .btn-subscribe {
+        flex: 100%;
+        height: 50px;
+    }
+
+}
