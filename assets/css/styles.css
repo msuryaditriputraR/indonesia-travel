@@ -31,6 +31,7 @@ a {
 }
 
 section {
+  width: 100%;
   padding: 70px 0;
 }
 
@@ -115,6 +116,7 @@ header.fixed {
   position: fixed;
   animation: headerFix .5 ease;
   padding-top: 15px;
+  border-bottom: 1px solid #284675;
 }
 
 header.fixed .header-overlay {
@@ -127,6 +129,20 @@ header.fixed .header-overlay {
   justify-content: flex-end;
   padding-bottom: 10px;
   z-index: 11;
+  /* transition: all .5s ease; */
+}
+
+.header-list.show {
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  display: block;
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(255, 255, 255, .2));
+  padding-bottom: 0;
+  z-index: 11;
+  /* transform: translateX(0); */
+
 }
 
 .header-list a {
@@ -137,32 +153,66 @@ header.fixed .header-overlay {
   display: inline-block;
 }
 
+.header-list.show a {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px 30px;
+  font-size: .8em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #dadada;
+
+}
+
+.header-list.show a:last-child {
+  display: none;
+}
+
+.header-list.show a:hover {
+  background-color: rgba(255, 255, 255, .5);
+}
+
 .header-list a:not(:last-child) {
   margin-right: 20px;
 }
 
-.header-list a.active {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
+.header-list a.active,
+.menu:hover,
 .header-list a:hover {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-header.fixed .header-list a.active {
-  color: var(--secondary-color);
-}
-
+header.fixed .header-list.show a:hover,
+header.fixed .header-list a.active,
+header.fixed .menu:hover,
 header.fixed .header-list a:hover {
   color: var(--secondary-color);
 }
 
+header.fixed .header-list.show {
+  top: 16vh;
+  background-color: var(--main-color);
+  background-image: none;
+}
+
+header.fixed .header-list.show a {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #284675;
+}
+
+header.fixed .header-list.show a:hover {
+  background-color: transparent;
+}
+
 .menu {
-  font-size: 30px;
+  order: 3;
+  font-size: 1.4em;
   margin-right: 20px;
+  padding-bottom: 10px;
   color: white;
   cursor: pointer;
   display: none;
+  z-index: 11;
 }
 
 .header-overlay {
@@ -338,7 +388,6 @@ header.fixed .header-list a:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  /* align-items: center; */
 }
 
 .content-kegiatan .card-kegiatan {
@@ -535,9 +584,9 @@ footer .logo img {
   background-color: white;
   width: 40px;
   height: 40px;
+  line-height: 45px;
   border-radius: 50%;
   text-align: center;
-  line-height: 45px;
   color: inherit;
   display: inline-block;
 }

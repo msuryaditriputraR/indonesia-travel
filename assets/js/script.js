@@ -1,5 +1,7 @@
 const header = document.querySelector("header");
 const menus = document.querySelectorAll(".header-link");
+const menuBars = document.querySelector(".menu");
+const headerList = document.querySelector(".header-list");
 
 // NOTE: scroll fix header
 window.addEventListener("scroll", () => {
@@ -21,4 +23,8 @@ menus.forEach((menu) => {
 
     menu.classList.add("active");
   });
+});
+
+menuBars.addEventListener("click", () => {
+  headerList.classList.toggle("show");
 });

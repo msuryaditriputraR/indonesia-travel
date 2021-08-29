@@ -1,22 +1,56 @@
 /* Untuk Tablet */
 @media all and (max-width: 1000px) {
-    .menu {
-        display: block;
+
+    header .wrap {
+        justify-content: space-between;
     }
 
-    .header-list {
-        display: none;
-    }
-
-    .card,
-    .main-contents,
-    .kegiatan {
-        width: 50%;
-        margin-bottom: 50px;
+    .header-list a {
+        font-size: .7em;
     }
 
     .heading h2 {
-        font-size: 20px;
+        font-size: 1.4em;
+    }
+
+    .heading p {
+        font-size: .9em;
+    }
+
+    #home {
+        height: 450px;
+        background-size: initial;
+    }
+
+    #home .contents h1 {
+        font-size: 1.25em;
+    }
+
+    .content-kegiatan {
+        margin-bottom: 25px;
+    }
+
+    .content-kegiatan,
+    .content-destinasi,
+    .main-contents {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .content-kegiatan .card-kegiatan,
+    .content-destinasi .card,
+    .main-contents .content {
+        flex-basis: 40%;
+        margin-bottom: 30px;
+    }
+
+
+    .main-contents .content img {
+        height: 320px;
+    }
+
+    .content-destinasi .card p {
+        transform: translateY(215%);
     }
 
     .box .item {
@@ -32,7 +66,6 @@
     .item .icon .fas {
         font-size: 40px;
     }
-
 
     .item p {
         font-size: 18px;
@@ -61,39 +94,100 @@
 
 
     .box-langganan .content .btn-subscribe {
-        flex: 25%;
+        flex-basis: 25%;
         height: 50px;
+    }
+
+    footer .footer-list {
+        flex-basis: 50%;
+    }
+
+    footer .footer-mediasosial {
+        flex-basis: 35%;
+    }
+
+    footer .footer-mediasosial a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .footer-mediasosial .fab {
+        font-size: .9em;
     }
 }
 
 /* Untuk Smartphone */
 @media all and (max-width: 670px) {
-
-    .contents h1 {
-        font-size: 28px;
+    header {
+        position: fixed;
     }
 
-    .card {
+
+    .header-list {
+        /* transform: translateX(150%); */
+        display: none;
+    }
+
+
+    .menu {
+        display: block;
+    }
+
+
+    header .logo {
+        flex-basis: 25%;
+    }
+
+    header .logo img {
         width: 100%;
-        margin-bottom: 10px;
     }
 
-    .kegiatan,
+    .heading p {
+        width: 80%;
+        font-size: .9em;
+    }
+
+    #home {
+        background-position: 50% 65%;
+    }
+
+    #home .contents h1 {
+        text-align: center;
+    }
+
+    .btn-baca-selengkapnya {
+        font-size: .7em;
+    }
+
+    #home .contents h1 span {
+        display: block;
+    }
+
+    .content-kegiatan,
+    .content-destinasi,
     .main-contents {
-        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .content-kegiatan .card-kegiatan,
+    .content-destinasi .card,
+    .main-contents .content {
+        flex-basis: 80%;
         margin-bottom: 30px;
     }
 
+    .main-contents .content img {
+        height: 280px;
+    }
+
     .box {
-        margin: 10px 50px;
+        margin: 10px 25px -10px;
     }
 
     .box .item {
         flex-basis: 45%;
-    }
-
-    .heading p {
-        font-size: 16px;
     }
 
     .box-langganan .content {
@@ -124,4 +218,26 @@
         height: 50px;
     }
 
+    footer .wrap {
+        flex-direction: column;
+    }
+
+    footer .logo {
+        text-align: center;
+    }
+
+    footer .logo img {
+        width: 30%;
+    }
+
+    .footer-list a {
+        font-size: .6em;
+    }
+
+}
+
+@media all and (max-width: 400px) {
+    #home .contents h1 {
+        font-size: .9em;
+    }
 }
