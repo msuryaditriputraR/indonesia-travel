@@ -134,7 +134,7 @@ header.fixed .header-overlay {
 
 .header-list.show {
   position: absolute;
-  top: 20%;
+  top: 20px;
   left: 0;
   right: 0;
   display: block;
@@ -190,7 +190,7 @@ header.fixed .header-list a:hover {
 }
 
 header.fixed .header-list.show {
-  top: 16%;
+  top: 15px;
   background-color: var(--main-color);
   background-image: none;
 }
