@@ -22,6 +22,7 @@ menus.forEach((menu) => {
     });
 
     menu.classList.add("active");
+    headerList.classList.toggle("show");
   });
 });
 
