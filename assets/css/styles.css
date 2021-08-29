@@ -134,15 +134,14 @@ header.fixed .header-overlay {
 
 .header-list.show {
   position: absolute;
-  top: 20vh;
   left: 0;
   right: 0;
+  top: 100%;
   display: block;
   background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(255, 255, 255, .2));
   padding-bottom: 0;
   z-index: 11;
   /* transform: translateX(0); */
-
 }
 
 .header-list a {
@@ -190,7 +189,6 @@ header.fixed .header-list a:hover {
 }
 
 header.fixed .header-list.show {
-  top: 16vh;
   background-color: var(--main-color);
   background-image: none;
 }
